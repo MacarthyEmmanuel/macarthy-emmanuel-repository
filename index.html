@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio of Macarthy Emmanuel Prince for the Content Team Lead / Coordinator role at Scholarship Union.">
+<title>Macarthy Emmanuel Prince | Portfolio for Content Team Lead / Coordinator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --ink: #000000;
+    --line: #000000;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #000000;
+      --ink: #ffffff;
+      --line: #ffffff;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #000000;
+    --ink: #ffffff;
+    --line: #ffffff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible, .btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  p { margin: 0 0 1rem; }
+  ul { margin: 0; padding: 0; list-style: none; }
+
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 1.5rem; }
+
+  /* top bar */
+  .top { border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; flex-wrap: wrap; gap: .5rem 2rem; align-items: baseline; justify-content: space-between; padding-top: 1.1rem; padding-bottom: 1.1rem; }
+  .brand { font-family: var(--serif); font-size: 1.15rem; font-weight: 600; text-decoration: none; }
+  .top nav { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; font-size: .92rem; }
+  .top nav a { text-decoration: none; }
+  .top nav a:hover { text-decoration: underline; }
+
+  /* hero */
+  .hero { padding: 5rem 0 4rem; }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(2.5rem, 7vw, 5.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin: 0 0 1.75rem;
+    max-width: 16ch;
+  }
+  .hero .lede { font-size: 1.2rem; max-width: 46ch; margin-bottom: 2rem; }
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .btn {
+    display: inline-block;
+    padding: .8rem 1.4rem;
+    border: 1px solid var(--line);
+    font-weight: 500;
+    font-size: .98rem;
+    text-decoration: none;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  .btn.solid { background: var(--ink); color: var(--bg); }
+  .btn:hover { text-decoration: underline; }
+
+  /* sections */
+  section { border-top: 1px solid var(--line); padding: 4rem 0; }
+  h2 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin: 0 0 .9rem;
+  }
+  .intro { max-width: 58ch; margin-bottom: 2.5rem; }
+  h3 { font-family: var(--serif); font-weight: 500; font-size: 1.4rem; line-height: 1.2; margin: 0 0 .5rem; }
+
+  /* fit ledger */
+  .ledger .row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    gap: 1rem 3rem;
+    padding: 1.4rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .ledger .row:last-child { border-bottom: 1px solid var(--line); }
+  .ledger .ask { font-family: var(--serif); font-style: italic; font-size: 1.3rem; line-height: 1.25; }
+  .ledger .proof p:last-child { margin-bottom: 0; }
+
+  /* work */
+  .work-item { border-top: 1px solid var(--line); padding: 1.75rem 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: 1rem 3rem; }
+  .work-item:last-child { border-bottom: 1px solid var(--line); }
+  .work-item dl { margin: 0; display: grid; gap: 1rem; }
+  .work-item dt { font-weight: 600; font-size: .95rem; margin-bottom: .1rem; }
+  .work-item dd { margin: 0; }
+  .big { font-family: var(--serif); font-size: clamp(3.5rem, 9vw, 6rem); line-height: 1; font-weight: 500; letter-spacing: -0.03em; margin: 0 0 .25rem; }
+
+  /* plan */
+  .plan { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+  .plan > div { border-top: 3px solid var(--line); padding-top: 1rem; }
+  .plan p { margin-bottom: 0; }
+  .note { margin-top: 1.75rem; max-width: 62ch; }
+
+  /* experience */
+  .job { border-top: 1px solid var(--line); padding: 1.5rem 0; }
+  .job:last-child { border-bottom: 1px solid var(--line); }
+  .job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem 1.5rem; margin-bottom: .6rem; }
+  .job-head h3 { margin: 0; }
+  .job-head .when { font-weight: 500; }
+  .job .org { margin-bottom: .6rem; font-style: italic; }
+  .job li { position: relative; padding-left: 1.1rem; margin-bottom: .3rem; max-width: 72ch; }
+  .job li::before { content: ""; position: absolute; left: 0; top: .72em; width: 5px; height: 5px; background: var(--ink); }
+
+  /* about */
+  .cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.25rem 3rem; }
+  .cols p { margin-bottom: 0; }
+
+  /* contact */
+  .contact-list { display: grid; gap: .35rem; margin: 1.5rem 0 2rem; font-size: 1.1rem; }
+  .contact-list a { font-weight: 500; }
+
+  footer { border-top: 1px solid var(--line); padding: 1.75rem 0 3rem; font-size: .9rem; }
+
+  @media (max-width: 820px) {
+    .hero { padding: 3.25rem 0 3rem; }
+    section { padding: 3rem 0; }
+    .ledger .row, .work-item { grid-template-columns: minmax(0, 1fr); gap: .6rem; }
+    .plan { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
+    .cols { grid-template-columns: minmax(0, 1fr); }
+  }
+
+  @media print {
+    :root { --bg: #fff; --ink: #000; --line: #000; }
+    .top nav, .actions { display: none; }
+    section { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Macarthy Emmanuel Prince</a>
+    <nav aria-label="Sections">
+      <a href="#fit">Fit for the role</a>
+      <a href="#work">Selected work</a>
+      <a href="#plan">First 90 days</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="wrap">
+      <h1>I turn scholarship research into content students can act on.</h1>
+      <p class="lede">I research, publish and make video guides on scholarships at ScholarshipTab. This portfolio shows how my work lines up with the Content Team Lead / Coordinator role at Scholarship Union.</p>
+      <div class="actions">
+        <a class="btn solid" href="#fit">See how I fit the role</a>
+        <a class="btn" href="mailto:macarthyemmanuel01@gmail.com">Email me</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="fit">
+    <div class="wrap">
+      <h2>What the role asks for, and where I've done it</h2>
+      <p class="intro">The left column uses the wording from the job description. The right column is the evidence from my own work and experience.</p>
+
+      <div class="ledger">
+        <div class="row">
+          <div class="ask">Lead and coordinate a content team</div>
+          <div class="proof"><p>As NYSC Corps Liaison Officer, I led and coordinated more than 130 corps members and kept communication moving between them and their host organisations. I'd bring the same steady coordination to a team of writers.</p></div>
+        </div>
+        <div class="row">
+          <div class="ask">Mentor, support and motivate team members</div>
+          <div class="proof"><p>I've trained a colleague at work, so mentoring is something I've already started doing.</p></div>
+        </div>
+        <div class="row">
+          <div class="ask">Research, verify and publish scholarship content</div>
+          <div class="proof"><p>At ScholarshipTab I research the latest scholarship opportunities and publish them on the company website. I created a Scholarship Research template so new opportunities are sourced in a consistent way.</p></div>
+        </div>
+        <div class="row">
+          <div class="ask">Excellent writing and editing in English</div>
+          <div class="proof"><p>I write and edit the scholarship content I publish and the training materials I develop for an international scholarship masterclass.</p></div>
+        </div>
+        <div class="row">
+          <div class="ask">Make content more professional, clear and engaging</div>
+          <div class="proof"><p>I make YouTube videos that walk students through how to apply for top scholarships. Each one has to explain the steps clearly enough for a student to follow on their own.</p></div>
+        </div>
+        <div class="row">
+          <div class="ask">Read analytics and turn them into decisions</div>
+          <div class="proof"><p>I increased ScholarshipTab's website traffic by 75% through optimised social media campaigns and targeted content. Earlier, at IITA, I collected and reported data on crop and soil quality.</p></div>
+        </div>
+        <div class="row">
+          <div class="ask">Coordinate with the social media team to amplify content</div>
+          <div class="proof"><p>The traffic growth came from social media campaigns, so promoting content on social channels is work I already do.</p></div>
+        </div>
+        <div class="row">
+          <div class="ask">SEO and keyword optimisation</div>
+          <div class="proof"><p>I apply SEO to the scholarship content and videos I publish so students can find them.</p></div>
+        </div>
+        <div class="row">
+          <div class="ask">Organised and dependable, with a knack for deadlines</div>
+          <div class="proof"><p>At NYSC I managed official correspondence and administrative support for the whole corps. Before that, I ran front desk operations at Hamilton Park Hotel.</p></div>
+        </div>
+        <div class="row">
+          <div class="ask">Familiarity with a design tool such as Canva</div>
+          <div class="proof"><p>I design social media fliers in Canva for Facebook and other platforms to promote scholarship opportunities.</p></div>
+        </div>
+        <div class="row">
+          <div class="ask">A Bachelor's degree</div>
+          <div class="proof"><p>B.Agric Tech, Second Class Upper, Federal University of Technology, Minna.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <p class="intro">Five pieces of work that show how I research, write, design, teach and grow an audience.</p>
+
+      <div>
+        <article class="work-item">
+          <h3>YouTube scholarship application guides</h3>
+          <dl>
+            <div><dt>What it is</dt><dd>Video walkthroughs on how to apply for top scholarships.</dd></div>
+            <div><dt>What I do</dt><dd>I make and publish the videos for ScholarshipTab and add SEO so students can find them.</dd></div>
+            <div><dt>Why it matters for this role</dt><dd>It shows I can turn research into clear, student-focused content in more than one format.</dd></div>
+          </dl>
+        </article>
+
+        <article class="work-item">
+          <h3>Scholarship fliers in Canva</h3>
+          <dl>
+            <div><dt>What it is</dt><dd>Social media fliers that promote scholarship opportunities on Facebook and other platforms.</dd></div>
+            <div><dt>What I do</dt><dd>I design them in Canva for ScholarshipTab.</dd></div>
+            <div><dt>Why it matters for this role</dt><dd>It shows I can package content for social channels, which is central to amplifying what the team publishes.</dd></div>
+          </dl>
+        </article>
+
+        <article class="work-item">
+          <h3>Scholarship research template</h3>
+          <dl>
+            <div><dt>What it is</dt><dd>A template for sourcing the latest scholarship opportunities.</dd></div>
+            <div><dt>What I did</dt><dd>I created it at ScholarshipTab to give the research process a set structure.</dd></div>
+            <div><dt>Why it matters for this role</dt><dd>A repeatable process is what lets a team of writers work to the same standard.</dd></div>
+          </dl>
+        </article>
+
+        <article class="work-item">
+          <h3>International scholarship masterclass</h3>
+          <dl>
+            <div><dt>What it is</dt><dd>A training programme that equips international students with competitive application skills, with seven sub-modules on scholarship documentation.</dd></div>
+            <div><dt>What I did</dt><dd>I developed the curriculum and produced a 10-page trainer module, a companion participant workbook and structured slide deck prompts.</dd></div>
+            <div><dt>Why it matters for this role</dt><dd>It shows I can set out clear standards and produce professional educational material.</dd></div>
+          </dl>
+        </article>
+
+        <article class="work-item">
+          <div>
+            <p class="big">75%</p>
+            <h3>Website traffic growth</h3>
+          </div>
+          <dl>
+            <div><dt>What it is</dt><dd>An increase in overall traffic to the ScholarshipTab website.</dd></div>
+            <div><dt>What I did</dt><dd>I ran optimised social media campaigns and targeted content to bring students to the site.</dd></div>
+            <div><dt>Why it matters for this role</dt><dd>It shows I can read what's working and use it to decide what to do next.</dd></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="plan">
+    <div class="wrap">
+      <h2>How I'd approach my first 90 days</h2>
+      <p class="intro">A starting plan for leading the team. I'd adjust it once I see how the writers work today.</p>
+
+      <div class="plan">
+        <div>
+          <h3>Days 1 to 30</h3>
+          <p>Learn how the team works now. Read the existing content and analytics to see what students search for and what performs. Talk to each writer about what helps them and what slows them down.</p>
+        </div>
+        <div>
+          <h3>Days 31 to 60</h3>
+          <p>Write a short editorial standard covering tone, sourcing from official pages and formatting. Add a review checklist and a shared calendar with owners and deadlines, building on the research template I already use.</p>
+        </div>
+        <div>
+          <h3>Days 61 to 90</h3>
+          <p>Start a monthly report to the co-founder on what performed, what's next and what the team needs. Plan upcoming scholarship cycles with the social media team so content is ready when students start searching.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="intro">Research, content and coordination, from most recent to earliest.</p>
+
+      <div>
+        <article class="job">
+          <div class="job-head"><h3>Scholarship Researcher &amp; Content Creator</h3><span class="when">June 2025 to present</span></div>
+          <p class="org">ScholarshipTab</p>
+          <ul>
+            <li>Research and publish the latest scholarship opportunities on the company website.</li>
+            <li>Created a Scholarship Research template that standardises how new opportunities are sourced.</li>
+            <li>Produce YouTube videos on how to apply for top scholarships, and apply SEO to content.</li>
+            <li>Design social media fliers in Canva for Facebook and other platforms to promote scholarship opportunities.</li>
+            <li>Increased overall website traffic by 75% through optimised social media campaigns and targeted content.</li>
+            <li>Trained a colleague at work.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head"><h3>Corps Liaison Officer</h3><span class="when">2024 to 2025</span></div>
+          <p class="org">National Youth Service Corps (NYSC)</p>
+          <ul>
+            <li>Led and coordinated 130+ corps members and facilitated communication with host organisations.</li>
+            <li>Managed official correspondence and provided administrative support.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head"><h3>Receptionist</h3><span class="when">2022 to 2024</span></div>
+          <p class="org">Hamilton Park Hotel, Ogun State</p>
+          <ul>
+            <li>Provided customer service and managed guest relations.</li>
+            <li>Ran front desk operations promptly and efficiently.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job-head"><h3>Research Intern</h3><span class="when">2021 to 2022</span></div>
+          <p class="org">International Institute of Tropical Agriculture (IITA)</p>
+          <ul>
+            <li>Collected data and prepared reports on crop and soil quality.</li>
+            <li>Gained practical experience with agricultural research methods and technologies.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>Skills, education and volunteering</h2>
+      <p class="intro">B.Agric Tech graduate with 3+ years of experience across data entry, content creation, SEO optimisation, teaching and hospitality.</p>
+
+      <div class="cols">
+        <div>
+          <h3>Content and research</h3>
+          <p>Scholarship research, content publishing, YouTube video content, SEO, Canva design.</p>
+        </div>
+        <div>
+          <h3>Leadership and coordination</h3>
+          <p>Team coordination, training and mentoring, deadline management, official correspondence, time management.</p>
+        </div>
+        <div>
+          <h3>Data and analysis</h3>
+          <p>Data entry, data collection and reporting, analytical thinking.</p>
+        </div>
+        <div>
+          <h3>Communication</h3>
+          <p>Team collaboration, customer relationship management, chat and email support.</p>
+        </div>
+        <div>
+          <h3>Education</h3>
+          <p>Bachelor of Agricultural Technology, Second Class Upper (2:1), Federal University of Technology, Minna, 2023.</p>
+        </div>
+        <div>
+          <h3>Volunteering</h3>
+          <p>Red Cross member. I took part in health outreach and emergency response programmes and promoted teamwork and humanitarian values.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Let's talk about the role</h2>
+      <p class="intro">I'd be glad to walk through any of this work in more detail. References are available on request.</p>
+      <div class="contact-list">
+        <div><a href="mailto:macarthyemmanuel01@gmail.com">macarthyemmanuel01@gmail.com</a></div>
+        <div><a href="tel:+2349056439523">09056439523</a> or <a href="tel:+2347070228692">07070228692</a></div>
+        <div>Isolo, Lagos State, Nigeria</div>
+      </div>
+      <div class="actions">
+        <a class="btn solid" href="mailto:macarthyemmanuel01@gmail.com?subject=Content%20Team%20Lead%20%2F%20Coordinator">Email me about the role</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">Portfolio of Macarthy Emmanuel Prince, prepared for the Content Team Lead / Coordinator role at Scholarship Union.</div>
+</footer>
+
+</body>
+</html>
