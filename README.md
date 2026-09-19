@@ -6,7 +6,7 @@ Portfolio prepared for the **Content Team Lead / Coordinator** role at Scholarsh
 
 | File | What it is |
 | --- | --- |
-| `index.html` | The portfolio page. A single file with no build step. |
+| `[index.html](index.html)` | The portfolio page. A single file with no build step. |
 
 ## What the portfolio covers
 
@@ -21,7 +21,7 @@ I research, publish and make video guides on scholarships at ScholarshipTab. Bef
 
 ## View it
 
-- Open `index.html` in any browser, or
+- Open `[index.html](index.html)` in any browser, or
 - View the hosted version on GitHub Pages once it is switched on for this repository.
 
 ## Contact
