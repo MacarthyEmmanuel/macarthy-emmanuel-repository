@@ -2,12 +2,9 @@
 
 Portfolio prepared for the **Content Team Lead / Coordinator** role at Scholarship Union. It shows how my scholarship research, content creation and coordination experience lines up with what the role asks for.
 
-## What's in this repository
+## 🔗 Live Portfolio
 
-| File | What it is |
-| --- | --- |
-| `index.html` | The portfolio page. A single file with no build step. |
-
+**[View My Portfolio](https://macarthyemmanuel.github.io/macarthy-emmanuel-repository/)**
 ## What the portfolio covers
 
 - **Fit for the role:** each requirement from the job description, matched with evidence from my work.
