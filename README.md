@@ -16,10 +16,6 @@ Portfolio prepared for the **Content Team Lead / Coordinator** role at Scholarsh
 
 I research, publish and make video guides on scholarships at ScholarshipTab. Before that I served as an NYSC Corps Liaison Officer, coordinating 130+ corps members. I hold a B.Agric Tech (Second Class Upper) from the Federal University of Technology, Minna.
 
-## View it
-
-- Open `index.html` in any browser, or
-- View the hosted version on GitHub Pages once it is switched on for this repository.
 
 ## Contact
 
